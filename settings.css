@@ -47,6 +47,14 @@ body {
 	color: #506070;
 }
 
+#version {
+	font-size: 10px !important;
+	float: right;
+	padding-right: 65px;
+	position: relative;
+    top: -15px;
+}
+
 #saved {
 	display: none;
 	font-size: 15px;

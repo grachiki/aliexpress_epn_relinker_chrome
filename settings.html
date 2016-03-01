@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Settings</title>
-	<link rel="stylesheet" href="options.css" />
+	<title></title>
+	<link rel="stylesheet" href="settings.css" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<script type="text/javascript" src="jquery-1.12.1.min.js"></script>
-	<script type="text/javascript" src="options.js"></script>
+	<script type="text/javascript" src="settings.js"></script>
 </head>
 <body>
 <div id="wrapper">
 <div id="cell">
-
-<div id="logo"><img src="icon48.png" width="48" height="48" align="middle" alt="logo" /><font>AliExpress reLinker</font></div>
+<div id="logo">
+<img src="icon48.png" width="48" height="48" align="middle" alt="logo" />
+<font id="name"></font>
+<font id="version"></font>
+</div>
 <div id="saved">Your settings have been successfully saved!</div>
 <div id="main">
     <label>DeepLink URL:</label>
@@ -20,7 +23,7 @@
     <input type="text" name="sub">
     <input type="submit" value="Save" id="save">
 </div>
-<div id="copyright">Author: <a href="http://tst48.wordpress.com" target="_blank">TheSoulTaker48</a></div>
+<div id="copyright">Author: <a href="#" id="author" target="_blank"></a></div>
 </div>
 </div>
 </body>

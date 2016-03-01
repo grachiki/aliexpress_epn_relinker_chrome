@@ -12,6 +12,14 @@
 
 // Document Object Model (DOM) is ready
 $(document).ready(function() {
+	// Get information from manifest
+	var manifest = chrome.runtime.getManifest();
+	document.title = 'Settings: '+manifest.short_name;
+	$('#name').html(manifest.short_name);
+	$('#version').html('version '+manifest.version);
+	$('#author').attr('href', manifest.homepage_url);
+	$('#author').html(manifest.author);
+	
 	// Restore options from local storage
 	var restore_options = function() {
 		var name = $(this).attr('name');
