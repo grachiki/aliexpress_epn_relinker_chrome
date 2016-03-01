@@ -28,6 +28,6 @@ $(document).ready(function() {
 	$('#save').click(function() {
 		$('input[type!=submit]').each(save_options);
 		$('select').each(save_options);
-		$('#saved').css('visibility', 'visible');
+		$('#saved').slideDown('slow');
 	});
 });
