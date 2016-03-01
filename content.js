@@ -44,6 +44,6 @@ $(document).ready(function() {
 		childList: true,
 		characterData: true
 	});
-	// Regular replacement of links
-	setInterval(replaceLinks, 5000);
+	// Replacement of links on DOM ready
+	replaceLinks();
 });
