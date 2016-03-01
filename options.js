@@ -15,11 +15,7 @@ $(document).ready(function() {
 	// Restore options from local storage
 	var restore_options = function() {
 		var name = $(this).attr('name');
-		if (localStorage[name] !== undefined) {
-			$(this).val(localStorage[name]);
-		} else {
-			localStorage[name] = $(this).val();
-		}
+		$(this).val(localStorage[name]);
 	};
 	$('input[type!=submit]').each(restore_options);
 	$('select').each(restore_options);
