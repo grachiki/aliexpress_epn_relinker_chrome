@@ -1,0 +1,32 @@
+{
+	"name": {
+		"message": "AliExpress reLinker (ePN)"
+	},
+	"short_name": {
+		"message": "AliExpress reLinker"
+	},
+	"description": {
+		"message": "Automatic replacement of links to ePN DeepLink for AliExpress."
+	},
+	"settings_title": {
+		"message": "Settings: "
+	},
+	"version_title": {
+		"message": "version: "
+	},
+	"author_title": {
+		"message": "Author: "
+	},
+	"deeplink_label": {
+		"message": "DeepLink URL:"
+	},
+	"sub_label": {
+		"message": "Sub (optional):"
+	},
+	"submit_value": {
+		"message": "Save"
+	},
+	"saved_message": {
+		"message": "Your settings have been successfully saved!"
+	}
+}

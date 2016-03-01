@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
 	"author": "TheSoulTaker48",
-	"name": "AliExpress reLinker (ePN)",
-	"short_name": "AliExpress reLinker",
-	"description": "Automatic replacement of links to ePN DeepLink for AliExpress.",
+	"name": "__MSG_name__",
+	"short_name": "__MSG_short_name__",
+	"description": "__MSG_description__",
 	"homepage_url": "http://tst48.wordpress.com",
 	"version": "1.0.0",
 	"icons": {
@@ -11,6 +11,7 @@
 		"48": "icon48.png",
 		"128": "icon128.png"
 	},
+	"default_locale": "en",
 	"background": {
 		"persistent": false,
 		"scripts": [

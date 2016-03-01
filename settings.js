@@ -14,11 +14,18 @@
 $(document).ready(function() {
 	// Get information from manifest
 	var manifest = chrome.runtime.getManifest();
-	document.title = 'Settings: '+manifest.short_name;
+	document.title = chrome.i18n.getMessage('settings_title')+manifest.short_name; // i18n
 	$('#name').html(manifest.short_name);
-	$('#version').html('version '+manifest.version);
+	$('#version').html(chrome.i18n.getMessage('version_title')+manifest.version); // i18n
 	$('#author').attr('href', manifest.homepage_url);
 	$('#author').html(manifest.author);
+	
+	// i18n locales
+	$('#saved').html(chrome.i18n.getMessage('saved_message'));
+	$('label[for=link_input]').html(chrome.i18n.getMessage('deeplink_label'));
+	$('label[for=sub_input]').html(chrome.i18n.getMessage('sub_label'));
+	$('input[type=submit]').val(chrome.i18n.getMessage('submit_value'));
+	$('#author_title').html(chrome.i18n.getMessage('author_title'));
 	
 	// Restore options from local storage
 	var restore_options = function() {
@@ -36,6 +43,7 @@ $(document).ready(function() {
 	$('#save').click(function() {
 		$('input[type!=submit]').each(save_options);
 		$('select').each(save_options);
+		$('#saved').hide();
 		$('#saved').slideDown('slow');
 	});
 });

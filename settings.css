@@ -37,6 +37,7 @@ body {
 	width:400px;
 	text-align: center;
 	margin: 0 auto;
+	margin-bottom: 15px;
 }
 
 #logo font {
@@ -61,7 +62,8 @@ body {
 	font-weight: bold;
 	color: #3c763d;
 	text-align: center;
-	margin: 10px auto;
+	margin: 0px auto;
+	margin-bottom: 10px;
 	padding: 15px 7px;
 	width:300px;
 	border: 2px solid #F3F3FF;
