@@ -51,8 +51,11 @@ $(document).ready(function() {
 		}
 		return false;
 	}
-	// Replacement for product-list (ajax)
-	replaceObserver('.product-list');
-	// Replacement of links on DOM ready
-	replaceLinks();
+	// TODO: Check cookies on the availability of information about the ePN
+	if(true) {
+		// Replacement for product-list (ajax)
+		replaceObserver('.product-list');
+		// Replacement of links on DOM ready
+		replaceLinks();
+	}
 });
