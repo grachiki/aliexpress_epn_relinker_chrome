@@ -33,17 +33,26 @@ $(document).ready(function() {
 			});
 		});
 	}
+	// MutationObserver for replace links function
+	function replaceObserver(selector) {
+		var target = document.querySelector(selector);
+		if(target) {
+			var observer = new MutationObserver(function(mutations) {
+				mutations.forEach(function(mutation) {
+					replaceLinks();
+				});
+			});
+			observer.observe(target, {
+				attributes: true,
+				childList: true,
+				characterData: true
+			});
+			return observer;
+		}
+		return false;
+	}
 	// Replacement for product-list (ajax)
-	var observer = new MutationObserver(function(mutations) {
-		mutations.forEach(function(mutation) {
-			replaceLinks();
-		});    
-	});
-	observer.observe(document.querySelector('.product-list'), {
-		attributes: true,
-		childList: true,
-		characterData: true
-	});
+	replaceObserver('.product-list');
 	// Replacement of links on DOM ready
 	replaceLinks();
 });
