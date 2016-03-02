@@ -21,8 +21,17 @@ chrome.runtime.onInstalled.addListener(function(object) {
 
 // Listener for getLocalStorage method
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-	if (request.method == 'getLocalStorage')
-		sendResponse(localStorage); // Return local storage object
-	else
-		sendResponse({});
+	switch(request.method) {
+		case 'getLocalStorage': // Return local storage object
+			sendResponse(localStorage);
+			break;
+		case 'getCookie': // Retrieves information about a single cookie
+			chrome.cookies.get(request.details, sendResponse);
+			return true;
+		case 'setCookie': // Sets a cookie with the given cookie data
+			chrome.cookies.set(request.details, sendResponse);
+			return true;
+		default:
+			sendResponse({}); // None
+	}
 });

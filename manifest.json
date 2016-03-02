@@ -31,5 +31,10 @@
 			], 
 			"run_at": "document_idle"
 		}
+	],
+	"permissions": [
+		"cookies",
+		"*://aliexpress.com/*",
+		"*://*.aliexpress.com/*"
 	]
 }
