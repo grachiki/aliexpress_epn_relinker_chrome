@@ -23,6 +23,12 @@
 	"sub_label": {
 		"message": "Sub (optional):"
 	},
+	"forced_label": {
+		"message": "Forced mode"
+	},
+	"ttl_label": {
+		"message": "Interval (sec):"
+	},
 	"submit_value": {
 		"message": "Save"
 	},

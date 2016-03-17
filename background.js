@@ -16,6 +16,8 @@ chrome.runtime.onInstalled.addListener(function(object) {
 	if(object.reason == 'install') {
 		localStorage.link = 'http://alipromo.com/redirect/cpa/o/o3dg77s3ecabxunu8mu33vxvw2nrlxyh/';
 		localStorage.sub = 'default_chrome';
+		localStorage.forced = false;
+		localStorage.ttl = 60;
 	}
 });
 

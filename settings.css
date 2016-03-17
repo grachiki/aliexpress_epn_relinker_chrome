@@ -97,9 +97,20 @@ input, select {
 	font-size: 14px;
 }
 
+input[type=checkbox] {
+    float: left;
+	width: auto;
+}
+
+label.checkbox_label {
+	display: table-caption;
+	margin-bottom: 15px;
+	width: 270px;
+}
+
 input[type=submit] {
 	width:120px;
-	margin: 25px auto 0 90px;
+	margin: 5px auto 0 90px;
 	cursor: pointer;
 }
 

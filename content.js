@@ -72,12 +72,14 @@ $(document).ready(function() {
 	} else { // Initialize the replacement of links
 		// Check cookies on the availability of information about ePN
 		chrome.runtime.sendMessage({method: 'getCookie', details: {name: 'relinker', url: window.location.href}}, function(cookie) {
-			if(cookie === null) {
-				// Replacement for product-list (ajax)
-				replaceObserver('.product-list');
-				// Replacement of links on DOM ready
-				replaceLinks();
-			}
+			chrome.runtime.sendMessage({method: 'getLocalStorage'}, function(storage) {
+				if((cookie === null) || (storage.forced == 'true' && Math.floor(new Date().getTime()/1000)-cookie.value > storage.ttl)) {
+					// Replacement for product-list (ajax)
+					replaceObserver('.product-list');
+					// Replacement of links on DOM ready
+					replaceLinks();
+				}
+			});
 		});
 	}
 });
