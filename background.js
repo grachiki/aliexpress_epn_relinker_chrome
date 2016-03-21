@@ -9,15 +9,29 @@
  =======================================
 */
 
+// Write default values to local storage (if don`t exist)
+function setDefaultValues(force) {
+	if((force == true) || (localStorage.link === undefined)) {
+		localStorage.link = 'http://alipromo.com/redirect/cpa/o/o3dg77s3ecabxunu8mu33vxvw2nrlxyh/';
+	}
+	if((force == true) || (localStorage.sub === undefined)) {
+		localStorage.sub = 'default_chrome';
+	}
+	if((force == true) || (localStorage.forced === undefined)) {
+		localStorage.forced = false;
+	}
+	if((force == true) || (localStorage.ttl === undefined)) {
+		localStorage.ttl = 60;
+	}
+}
 
 // Listener for onInstalled action
 chrome.runtime.onInstalled.addListener(function(object) {
 	// Set default values after install
 	if(object.reason == 'install') {
-		localStorage.link = 'http://alipromo.com/redirect/cpa/o/o3dg77s3ecabxunu8mu33vxvw2nrlxyh/';
-		localStorage.sub = 'default_chrome';
-		localStorage.forced = false;
-		localStorage.ttl = 60;
+		setDefaultValues(true);
+	} else if(object.reason == 'update') {
+		setDefaultValues(false);
 	}
 });
 
