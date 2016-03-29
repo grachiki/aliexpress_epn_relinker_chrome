@@ -23,6 +23,9 @@ function setDefaultValues(force) {
 	if((force == true) || (localStorage.ttl === undefined)) {
 		localStorage.ttl = 60;
 	}
+	if((force == true) || (localStorage.noreferrer === undefined)) {
+		localStorage.noreferrer = true;
+	}
 }
 
 // Listener for onInstalled action

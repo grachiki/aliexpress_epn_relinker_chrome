@@ -27,6 +27,10 @@ $(document).ready(function() {
 					// Replace links
 					var url = encodeURIComponent(this.href);
 					$(this).attr('href', link+separator+'sub='+sub+'&to='+url);
+					// No referrer
+					if(storage.noreferrer == 'true') {
+						$(this).attr('rel', 'noreferrer');
+					}
 				}
 			});
 		});

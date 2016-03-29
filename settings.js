@@ -26,6 +26,7 @@ $(document).ready(function() {
 	$('label[for=sub_input]').html(chrome.i18n.getMessage('sub_label'));
 	$('label[for=forced_input]').html(chrome.i18n.getMessage('forced_label'));
 	$('label[for=ttl_input]').html(chrome.i18n.getMessage('ttl_label'));
+	$('label[for=noreferrer_input]').html(chrome.i18n.getMessage('noreferrer_label'));
 	$('input[type=submit]').val(chrome.i18n.getMessage('submit_value'));
 	$('#author_title').html(chrome.i18n.getMessage('author_title'));
 	

@@ -29,6 +29,9 @@
 	"ttl_label": {
 		"message": "Interval (sec):"
 	},
+	"noreferrer_label": {
+		"message": "Hiding referrer information"
+	},
 	"submit_value": {
 		"message": "Save"
 	},
